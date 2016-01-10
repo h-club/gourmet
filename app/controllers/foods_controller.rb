@@ -18,7 +18,8 @@ class FoodsController < ApplicationController
 	end
 
   def show
-  end
+  	@post = Post.find(params[:id])
+	end
 
   def write
   end

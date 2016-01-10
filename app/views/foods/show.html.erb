@@ -1,2 +1,10 @@
-<h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>작성 글 보기</h2>
+
+<div style="border: 1px solid #ffffff">
+	<h4>젝목: <%= @post.title %></h4>
+	<p style="color: #ff0000">카테고리: <%= @post.category %></p>
+	<p>내용: <%= @post.content %></p>
+
+	<p><a href="/">전체 글 가기</a></p>
+</div>
