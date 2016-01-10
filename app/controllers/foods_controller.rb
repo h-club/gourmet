@@ -4,7 +4,18 @@ class FoodsController < ApplicationController
   end
 
   def posts_category
-  end
+  	case params[:category]
+		when "venture"
+			@category = "벤처"
+		when "DK"
+      @category = "대경"
+		when "CM"
+      @category = "창모"
+		when "CH"
+      @category = "찬희"
+		end
+		@posts = Post.where(category: @category)
+	end
 
   def show
   end
