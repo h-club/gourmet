@@ -24,7 +24,19 @@ class UsersController < ApplicationController
   end
 
   def login_complete
-  end
+  	user = User.whre(username: params[:username])[0]
+		if user.nil?
+			flash[:alert] = "아이디 또는 비밀번호 잘못 입력"
+			redirect_to :back
+		elseif user.password != params[:password]
+			flash[:alert] = "아이디 또는 비밀번호 잘못 입력"
+ 			redirect_to :back
+		else
+			session[:user_id] = user.id
+			flash[:alert] = "로그인 오케이"
+			redirect_to "/"
+		end
+	end
 
   def logout_complete
   end
