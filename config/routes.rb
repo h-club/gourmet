@@ -1,4 +1,9 @@
 Gourmet::Application.routes.draw do
+  get "users/signup"
+  post "users/signup_complete"
+  get "users/login"
+  get "users/login_complete"
+  get "users/logout_complete"
 	root 'foods#posts'
   get "/:category" => 'foods#posts_category'
   get "foods/show/:id" => 'foods#show'
@@ -8,20 +13,11 @@ Gourmet::Application.routes.draw do
   post "foods/edit_complete"
   get "foods/delete_complete/:id" => 'foods#delete_complete'
   post "foods/write_comment_complete" 
-	get "foods/delete_comment_complete/:id" => 'foods#delete_comment_complete'	
-# The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+	get "foods/delete_comment_complete/:id" => 'foods#delete_comment_complete'
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
+#Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
   # Example resource route with options:
