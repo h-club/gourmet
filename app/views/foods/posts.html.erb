@@ -1,0 +1,17 @@
+<h4><a href="#">h-club</a> || <a href="#">벤처</a> | <a href="#">대경</a> | <a href="#">창모</a> | <a href="#">찬희</a></h4>
+
+<div>
+	<h2>Welcome H-Clubber!!</h2>
+	<p>우리 정보 공유 사이트</p>
+</div>
+
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+	<h4><%= post.title %></h4>
+	<p style="color: #ff0000"><%= post.category %></p>
+	<p>작성자 아이디</p>
+	<p><%= post.content %></p>
+</div>
+<% end %>
