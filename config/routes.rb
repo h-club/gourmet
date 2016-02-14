@@ -14,7 +14,8 @@ Gourmet::Application.routes.draw do
   get "foods/delete_complete/:id" => 'foods#delete_complete'
   post "foods/write_comment_complete" 
 	get "foods/delete_comment_complete/:id" => 'foods#delete_comment_complete'
-
+	get 'email/email_form' => 'email#email_form'
+	post 'email/email_send' => 'email#email_send'
 
 
 #Example resource route (maps HTTP verbs to controller actions automatically):

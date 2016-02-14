@@ -6,10 +6,28 @@
     <div class="col-md-3 text-right">
     </div>
     <div class="col-md-6">
+			<p><strong>작성자: <%= post.user.username %></strong></p>
       <h4><a href="/foods/show/<%= post.id %>"><%= post.title %></a> [<%= post.comments.count %>]</h4>
       <p><span class="label label-warning"><%= post.category %></span></p>
-      <p><strong><%= post.user.username %></strong></p>
+    
     </div>
   </div>
 </div>
 <% end %>
+
+
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-2">
+      <h4><strong>Contact at :</strong></h4>
+    </div>
+    <div class="col-md-3">
+      <div class="list-group">
+        <h4><a href="#" class="list-group-item" target="_blank">h-club@gmail.com</a></h4>
+       
+      </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>

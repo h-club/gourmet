@@ -10,11 +10,11 @@
 			<li><a href="/CM">창모</a></li>
 			<li><a href="/CH">찬희</a></li>
 			<li><a href="/foods/write">글쓰기</a></li>
+			<li><a href="/ncm">CM's</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<% if session[:user_id].nil? %>
-			<li><a href="/users/signup">회원가입</a></li>
-      <li><a href="/users/login">로그인</a></li>
+			<li><a href="/users/login">로그인</a></li>
       <% else %>
       <li><a href="/users/logout_complete">로그아웃</a></li>
       <% end %>
